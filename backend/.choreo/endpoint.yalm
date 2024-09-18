@@ -1,0 +1,16 @@
+version: 0.1
+
+# this is a basic config that Choreo will look for when deploying a REST API
+# The port has to match the PORT of DJANGO API
+# networkVisibility: everybody can view it. It could be specified as Project or Organization
+# Context : this is the base path of the API we want to expose
+#       In our case, we want ot expose the entire one
+
+# Cf Choreo documentation
+
+endpoints:
+  - name: "REST API"
+    port: 8000
+    type: REST
+    networkVisibility: Public
+    context: /

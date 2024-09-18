@@ -1,0 +1,5 @@
+# It will specify the cmd to start executing the application
+# 0.0.0.0 -> can be run on any origin or on the public IP address of the server they were executing on
+# so anyone will be able to access it
+
+web: python manage.py runserver 0.0.0.0:8000
