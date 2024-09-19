@@ -11,7 +11,7 @@
 import axios from "axios";
 import { ACCESS_TOKEN } from "./constants";
 
-// PAS ENCORE USED : const apiUrl = "/choreo-apis/awbo/backend/rest-api-be2/v1.0";
+const apiUrl = "/choreo-apis/djangoreactfirst/backend/v1";
 
 // How to import an ENV VAR
 // import anything that is specified inside an environment variable file
@@ -19,7 +19,7 @@ import { ACCESS_TOKEN } from "./constants";
 // The idea -> to have this in an ENV VAR so it's very easy for us to load and change what the URL should be.
 //      (aller dans .env file)
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : apiUrl,
 });
 
 // on va regarder si dans le localStorage on a un access token
